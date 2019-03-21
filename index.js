@@ -1,10 +1,11 @@
 const db = require('./data/dbHelpers');
 
-const dish= {
-    category: 'Chinese'
+const recipe = {
+    recipe_name: 'Teriyaki',
+    dish_id: 4
 }
 
-db.addDish(dish)
+db.addRecipe(recipe)
     .then(id => {
         console.log(id[0])
     })
@@ -12,7 +13,15 @@ db.addDish(dish)
         console.log(err);
     })
 
-db.getDishes()
+db.getRecipes()
+    .then(dishes => {
+        console.log(dishes)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+
+db.getDish(4)
     .then(dishes => {
         console.log(dishes)
     })

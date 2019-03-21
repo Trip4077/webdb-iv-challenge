@@ -23,5 +23,10 @@ module.exports = {
     addDish: dish => {
         return db.insert(dish)
                  .into('dish')
+    },
+    //Add Recipe
+    addRecipe: recipe => {
+        return db.insert(recipe)
+                 .into('recipes')
     }
 }
