@@ -12,4 +12,11 @@ module.exports = {
     getRecipes: () => {
         return db('recipes')
     },
+    //Get Dish By ID
+    getDish: id => {
+        return db.select( 'category', 'recipe_name')
+                 .from('dish')
+                 .innerJoin('recipes', 'dish.id', 'dish_id')
+                 .where('dish.id', id);
+    }
 }
