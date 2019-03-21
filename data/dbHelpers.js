@@ -20,5 +20,8 @@ module.exports = {
                  .where('dish.id', id);
     },
     //Add Dish
-
+    addDish: dish => {
+        return db.insert(dish)
+                 .into('dish')
+    }
 }
