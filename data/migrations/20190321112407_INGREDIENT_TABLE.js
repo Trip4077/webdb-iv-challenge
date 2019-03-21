@@ -2,8 +2,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('ingredients', tbl => {
       tbl.increments();
-      tbl.string('ing_name')
-         .notNullable();
+      tbl.string('ing_name').notNullable();
   })
 };
 
