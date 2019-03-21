@@ -18,5 +18,7 @@ module.exports = {
                  .from('dish')
                  .innerJoin('recipes', 'dish.id', 'dish_id')
                  .where('dish.id', id);
-    }
+    },
+    //Add Dish
+
 }
